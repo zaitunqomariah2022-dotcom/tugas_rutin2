@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Landing page pribadi Zaitun Qomariah, mahasiswa Ilmu Komputer Universitas Negeri Medan.">
+
+    <meta name="author" content="Zaitun Qomariah">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Landing Page Pribadi - Zaitun Qomariah">
+    <meta property="og:description"
+        content="Profil pribadi Zaitun Qomariah, mahasiswa Ilmu Komputer UNIMED.">
+    <meta property="og:type" content="website">
+
+    <title>Landing Page Pribadi - Zaitun Qomariah</title>
+
+
+    <!-- ==============================
+         CSS
+    =============================== -->
+    <style>
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            background: #fff5fa;
+            color: #333;
+        }
+
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #ff69a8, #d946ef);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+
+        /* NAVIGATION */
+        nav {
+            background: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d63384;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #ffe0ed;
+        }
+
+
+        /* MAIN */
+        main {
+            padding: 30px 0;
+        }
+
+        section {
+            padding: 30px 0;
+        }
+
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            border: 2px solid #f3b5d0;
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.08);
+        }
+
+        .card h2 {
+            color: #d63384;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f5c2d9;
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #8e3b68;
+            margin-bottom: 10px;
+        }
+
+
+        /* FOTO */
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 5px solid #f3b5d0;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            color: #777;
+            font-style: italic;
+        }
+
+
+        /* LIST */
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+
+        /* FORM */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #8e3b68;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e5a9c6;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #d63384;
+        }
+
+        button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b52b6f;
+        }
+
+
+        /* ASIDE */
+        aside {
+            padding: 30px 0;
+        }
+
+        aside .card {
+            border-left: 5px solid #d63384;
+        }
+
+
+        /* FOOTER */
+        footer {
+            background: #3f1d35;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #ffb6d5;
+        }
+
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            nav .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+    <header>
+
+        <div class="container">
+
+            <h1>Zaitun Qomariah</h1>
+
+            <p>
+                Mahasiswa Ilmu Komputer
+                Universitas Negeri Medan
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         NAVIGASI
+    =============================== -->
+    <nav aria-label="Navigasi utama">
+
+        <div class="container">
+
+            <a href="#tentang">Tentang Saya</a>
+
+            <a href="#pendidikan">Pendidikan</a>
+
+            <a href="#hobi">Hobi</a>
+
+            <a href="#cita-cita">Cita-Cita</a>
+
+            <a href="#kontak">Kontak</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+    <main>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <h2>Halo, Saya Zaitun 👋</h2>
+
+                <p>
+                    Selamat datang di landing page pribadi saya.
+                    Saya adalah mahasiswa Ilmu Komputer yang sedang
+                    belajar dan mengembangkan kemampuan di bidang teknologi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TENTANG SAYA -->
+        <section id="tentang">
+
+            <div class="container card">
+
+                <h2>Tentang Saya</h2>
+
+
+                <figure>
+
+                    <!--
+                    GANTI foto.jpg
+                    dengan nama file foto kamu.
+                    Contoh:
+                    src="foto-zaitun.jpg"
+                    -->
+
+                    <img
+                        src="zzz.jpeg"
+                        alt="Foto Zaitun Qomariah"
+                        width="250">
+
+                    <figcaption>
+                        Zaitun Qomariah -
+                        Mahasiswa Ilmu Komputer UNIMED
+                    </figcaption>
+
+                </figure>
+
+
+                <p>
+                    Nama saya <strong>Zaitun Qomariah</strong>.
+                    Saya merupakan mahasiswa
+                    <strong>Universitas Negeri Medan (UNIMED)</strong>,
+                    Program Studi Ilmu Komputer,
+                    Fakultas MIPA.
+                </p>
+
+                <br>
+
+                <p>
+                    Saya tertarik mempelajari teknologi,
+                    pemrograman, dan pengembangan website.
+                    Saya juga senang mencoba hal-hal baru
+                    yang dapat meningkatkan kemampuan saya.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PENDIDIKAN -->
+        <section id="pendidikan">
+
+            <div class="container card">
+
+                <h2>Pendidikan</h2>
+
+
+                <article>
+
+                    <h3>Universitas Negeri Medan</h3>
+
+                    <p>
+                        <strong>Program Studi:</strong>
+                        Ilmu Komputer
+                    </p>
+
+                    <p>
+                        <strong>Fakultas:</strong>
+                        MIPA
+                    </p>
+
+                    <p>
+                        <strong>Pendidikan:</strong>
+
+                        <time datetime="2013">
+                            2013
+                        </time>
+
+                        -
+
+                        <time datetime="2026">
+                            sekarang
+                        </time>
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOBI -->
+        <section id="hobi">
+
+            <div class="container card">
+
+                <h2>Hobi</h2>
+
+
+                <article>
+
+                    <h3>🏐 Bermain Bola Voli</h3>
+
+                    <p>
+                        Salah satu hobi saya adalah bermain
+                        bola voli. Saya menikmati kegiatan ini
+                        untuk mengisi waktu luang dan menjaga
+                        kebugaran tubuh.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CITA-CITA -->
+        <section id="cita-cita">
+
+            <div class="container card">
+
+                <h2>Cita-Cita</h2>
+
+
+                <article>
+
+                    <h3>💼 Berkarier di Bidang Perkantoran</h3>
+
+                    <p>
+                        Saya memiliki cita-cita untuk dapat
+                        bekerja di lingkungan perkantoran
+                        dan memanfaatkan ilmu komputer
+                        yang saya pelajari selama kuliah.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASIDE -->
+        <aside>
+
+            <div class="container card">
+
+                <h2>Informasi Singkat</h2>
+
+
+                <ul>
+
+                    <li>
+                        <strong>Nama:</strong>
+                        Zaitun Qomariah
+                    </li>
+
+                    <li>
+                        <strong>Universitas:</strong>
+                        Universitas Negeri Medan
+                    </li>
+
+                    <li>
+                        <strong>Program Studi:</strong>
+                        Ilmu Komputer
+                    </li>
+
+                    <li>
+                        <strong>Fakultas:</strong>
+                        MIPA
+                    </li>
+
+                    <li>
+                        <strong>Hobi:</strong>
+                        Bermain bola voli
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+
+        <!-- FORM KONTAK -->
+        <section id="kontak">
+
+            <div class="container card">
+
+                <h2>Hubungi Saya</h2>
+
+
+                <form action="#" method="post">
+
+
+                    <!-- NAMA -->
+                    <div class="form-group">
+
+                        <label for="nama">
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Masukkan nama"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="contoh@email.com"
+                            required>
+
+                    </div>
+
+
+                    <!-- TANGGAL -->
+                    <div class="form-group">
+
+                        <label for="tanggal">
+                            Tanggal
+                        </label>
+
+                        <input
+                            type="date"
+                            id="tanggal"
+                            name="tanggal"
+                            required>
+
+                    </div>
+
+
+                    <!-- PESAN -->
+                    <div class="form-group">
+
+                        <label for="pesan">
+                            Pesan
+                        </label>
+
+                        <textarea
+                            id="pesan"
+                            name="pesan"
+                            rows="5"
+                            placeholder="Tuliskan pesan..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+                    <button type="submit">
+                        Kirim Pesan
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                &copy;
+                <time datetime="2026">2026</time>
+                Zaitun Qomariah.
+                Semua hak dilindungi.
+            </p>
+
+
+            <p>
+
+                Email:
+
+                <a href="mailto:zaitunqomariah2022@gmail.com">
+                    zaitunqomariah2022@gmail.com
+                </a>
+
+            </p>
+
+
+            <p>
+
+                Instagram:
+
+                <a
+                    href="https://www.instagram.com/zaitunqmrrhh_/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    @zaitunqmrrhh_
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
